@@ -13,6 +13,7 @@ function includeHTML(selector, file) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  includeHTML("#navbarindex", "partials/indexNavbar.html");
   includeHTML("#navbar", "partials/navbar.html");
   includeHTML("#footer", "partials/footer.html");
 });
