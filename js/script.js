@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const base = inHtmlFolder ? "partials/" : "html/partials/";
 
   try {
+    await loadInto("#navbarindex", base + "indexNavbar.html");
     await loadInto("#navbar", base + "navbar.html");
     await loadInto("#footer", base + "footer.html");
   } catch (e) {
