@@ -1,3 +1,11 @@
+
+
+
+
+
+
+//Include ///////////////////////////////////////////////////////////////////////////////
+//Test de chargement
 async function loadInto(selector, url) {
   const el = document.querySelector(selector);
   if (!el) return;
@@ -7,6 +15,8 @@ async function loadInto(selector, url) {
   el.innerHTML = await res.text();
 }
 
+
+// Inclusion de header/footer
 document.addEventListener("DOMContentLoaded", async () => {
   const inHtmlFolder = location.pathname.includes("/html/");
   const base = inHtmlFolder ? "partials/" : "html/partials/";

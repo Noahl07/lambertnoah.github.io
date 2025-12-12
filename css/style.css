@@ -324,7 +324,7 @@ li:hover .sousmenu {
 }
 
 
-  /*  Index////////////////////////////////////////////////////////////////////////////////*/
+  /*  Index/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
   .presentation {
 
     background-color: #2c3e50; /* Couleur de fond plus moderne */
@@ -561,7 +561,350 @@ li:hover .sousmenu {
 }
 
 
-/*//////////////////////////////////////////////////*/
+/*Projets////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.sio-section{
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+}
+
+/* Carte blanche avec ombre */
+.sio-card{
+  width: min(1100px, 100%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 40px 40px 30px;
+}
+
+/* Titre centré */
+.sio-title{
+  text-align: center;
+  font-size: 32px;
+  margin: 10px 0 30px;
+}
+
+/* Encart vert */
+.sio-encart{
+  background: #33b35a;          /* ajuste à ta teinte */
+  border-radius: 6px;
+  padding: 18px;
+  margin: 0 auto 35px;
+}
+
+/* Bandeau clair du haut (comme sur ta maquette) */
+.sio-encart-head{
+  background: #e9e9e9;
+  border-radius: 4px;
+  padding: 16px 12px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.sio-encart-head h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Zone des 2 cercles */
+.sio-encart-body{
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 8px 18px;
+}
+
+.sio-separator{
+  width: 2px;
+  height: 180px;
+  background: rgba(0,0,0,0.35);
+  justify-self: center;
+}
+
+.sio-option{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sio-under{
+  margin-top: 16px;
+  max-width: 260px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.sio-circle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #eee;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.sio-circle-title{
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.sio-circle-sub{
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Texte "Compétences" en bas */
+.sio-encart-foot{
+  text-align: center;
+  padding-top: 8px;
+}
+
+.sio-encart-foot p{
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Texte en dessous */
+.sio-text{
+  line-height: 1.9;
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: justify;
+
+}
+
+@media (max-width: 650px){
+  .sio-card{ padding: 30px 18px; }
+  .sio-title{ font-size: 26px; }
+
+  .sio-encart-body{
+    grid-template-columns: 1fr;
+  }
+  .sio-separator{
+    display: none;
+  }
+}
+
+
+/*comp*/
+.e5-competences{
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.e5-competences h4{
+  margin-bottom: 16px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.e5-table{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.e5-row{
+  display: grid;
+  grid-template-columns: 80px 1.5fr 3fr;
+  gap: 12px;
+  padding: 12px 10px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.e5-header{
+  background: #eaeaea;
+  font-weight: 700;
+}
+
+.e5-row span:first-child{
+  font-weight: 700;
+  text-align: center;
+}
+/*texte*/
+.sio-info-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.sio-info-card{
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.sio-info-card h4{
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sio-list{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.sio-list li{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px){
+  .sio-info-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/*Compétences////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.comp-section{
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+}
+
+.comp-card{
+  width: min(1100px, 100%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 40px;
+  position: relative;
+}
+
+/* badge "Mes compétences" */
+.comp-badge{
+  width: fit-content;
+  margin: 0 auto 28px;
+  background: #e9e9e9;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* layout flèche + liste */
+.comp-layout{
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.comp-arrow{
+  position: relative;
+  width: 220px;
+  height: 520px;
+  margin: 0 auto;
+
+  /* remonte la flèche pour aligner avec le 1er trait */
+  transform: translateY(-40px);
+}
+
+/* la forme réelle + ombre */
+.comp-arrow::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 26%,
+    70% 26%,
+    70% 100%,
+    30% 100%,
+    30% 26%,
+    0% 26%
+  );
+
+  background: linear-gradient(180deg, #2ed573, #18b85a);
+
+  /* ombre visible (pro) */
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
+}
+
+/* arrondi “propre” (léger) : on arrondit surtout la tige */
+.comp-arrow::after{
+  content: "";
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 26%;
+  bottom: 0;
+  background: transparent;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+
+
+
+/* items */
+.comp-items{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.comp-item{
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.comp-line{
+  height: 2px;
+  background: rgba(0,0,0,0.55);
+}
+
+.comp-text h3{
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.comp-text p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .comp-layout{
+    grid-template-columns: 1fr;
+  }
+  .comp-arrow{
+    height: 360px;
+  }
+  .comp-item{
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+
+
+
+
+
+/*Autre//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .vehicule-article {
   max-width: 800px;
