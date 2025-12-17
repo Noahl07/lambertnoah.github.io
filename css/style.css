@@ -982,7 +982,7 @@ li:hover .sousmenu {
 
 /* positions comme ta maquette */
 .veille-item.v1{ left: 10px; bottom: 80px; }
-.veille-item.v1::before{ left: 120px; transform: rotate(-65deg); transform-origin: left center; }
+.veille-item.v1::before{ left: 140px; transform: rotate(-65deg); transform-origin: left center; }
 
 .veille-item.v2{ left: 260px; top: 70px; }
 .veille-item.v2::before{ left: 60px; transform: rotate(65deg); transform-origin: left center; }
