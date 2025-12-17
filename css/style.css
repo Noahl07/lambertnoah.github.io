@@ -900,11 +900,11 @@ li:hover .sousmenu {
 }
 
 /*Veille/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
+/* base carte (même logique que tes autres pages) */
 .veille-section{
   display: flex;
   justify-content: center;
-  padding: 60px 16px;
+  padding: 40px 16px;
 }
 
 .veille-card{
@@ -918,84 +918,127 @@ li:hover .sousmenu {
 .veille-title{
   text-align: center;
   font-size: 28px;
-  margin: 0 0 30px;
+  margin: 0 0 26px;
   font-weight: 700;
 }
 
-/* zone de mise en page */
-.veille-zone{
-  position: relative;
-  height: 520px;
+/* carte thématique */
+.veille-theme h3{
+  margin: 18px 0 10px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-/* grande flèche horizontale */
+.veille-theme p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.veille-sources{
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.veille-sources a{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.veille-sources a:hover{
+  border-bottom-color: rgba(0,0,0,0.6);
+}
+
+/* zone frise */
+.veille-zone{
+  position: relative;
+  height: 420px;               /* assez grand pour éviter chevauchements */
+  margin-top: 10px;
+}
+
+/* grande flèche */
 .veille-arrow{
   position: absolute;
   left: 40px;
   right: 40px;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  height: 140px;
+  height: 110px;
 
   background: linear-gradient(180deg, #2ed573, #18b85a);
   clip-path: polygon(
-    0% 15%,
-    82% 15%,
+    0% 18%,
+    82% 18%,
     82% 0%,
     100% 50%,
     82% 100%,
-    82% 85%,
-    0% 85%
+    82% 82%,
+    0% 82%
   );
 
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
+  z-index: 1;
 }
 
-/* items veilles */
+/* items cliquables */
 .veille-item{
   position: absolute;
-  width: 220px;
-  background: transparent; /* tu peux mettre un fond si tu veux plus tard */
+  width: 190px;
+  color: #111;
+  text-decoration: none;
+  z-index: 2;                  /* au-dessus de la flèche */
 }
 
-.veille-item h3{
-  margin: 0 0 6px;
-  font-size: 14px;
+.veille-item .v-title{
+  display: block;
   font-weight: 700;
-}
-
-.veille-item p{
-  margin: 0;
   font-size: 13px;
-  line-height: 1.4;
+  margin-bottom: 4px;
 }
 
-/* trait (callout) */
-.veille-item::before{
+.veille-item .v-sub{
+  display: block;
+  font-size: 12.5px;
+  opacity: 0.9;
+}
+
+/* effet hover léger (pro) */
+.veille-item:hover .v-title{
+  text-decoration: underline;
+}
+
+/* callout (trait) */
+.veille-item::after{
   content: "";
   position: absolute;
-  width: 120px;
+  width: 130px;
   height: 2px;
   background: rgba(0,0,0,0.55);
-  top: 18px;
+  top: 20px;
+  left: 0;
+  transform-origin: left center;
 }
 
-/* positions comme ta maquette */
-.veille-item.v1{ left: 10px; bottom: 80px; }
-.veille-item.v1::before{ left: 140px; transform: rotate(-65deg); transform-origin: left center; }
+/* positions (évite chevauchement) */
+.veille-item.v1{ left: 55px;  top: 275px; }
+.veille-item.v1::after{ transform: rotate(-65deg); }
 
-.veille-item.v2{ left: 260px; top: 70px; }
-.veille-item.v2::before{ left: 60px; transform: rotate(65deg); transform-origin: left center; }
+.veille-item.v2{ left: 230px; top: 70px; }
+.veille-item.v2::after{ transform: rotate(65deg); }
 
-.veille-item.v3{ left: 430px; bottom: 130px; }
-.veille-item.v3::before{ left: -70px; transform: rotate(60deg); transform-origin: right center; }
+.veille-item.v3{ left: 420px; top: 265px; }
+.veille-item.v3::after{ transform: rotate(60deg); }
 
-.veille-item.v4{ left: 560px; top: 90px; }
-.veille-item.v4::before{ left: 70px; transform: rotate(70deg); transform-origin: left center; }
+.veille-item.v4{ left: 560px; top: 80px; }
+.veille-item.v4::after{ transform: rotate(70deg); }
 
-/* responsive (simple) */
+/* responsive : on passe en liste (pas de chevauchement sur mobile) */
 @media (max-width: 900px){
-  .veille-zone{ height: auto; padding: 260px 0 60px; }
+  .veille-zone{
+    height: auto;
+  }
 
   .veille-arrow{
     position: relative;
@@ -1003,18 +1046,18 @@ li:hover .sousmenu {
     left: 0;
     right: 0;
     transform: none;
-    margin: 0 auto;
-    width: 100%;
+    margin: 10px 0 20px;
   }
 
   .veille-item{
     position: relative;
     width: auto;
-    margin: 18px 0 0;
+    margin: 14px 0;
   }
 
-  .veille-item::before{ display: none; }
+  .veille-item::after{ display: none; }
 }
+
 
 
 
