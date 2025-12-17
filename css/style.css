@@ -901,10 +901,12 @@ li:hover .sousmenu {
 
 /*Veille/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* base carte (même logique que tes autres pages) */
-.veille-section{
-  display: flex;
-  justify-content: center;
-  padding: 40px 16px;
+/* page veille: 2 cartes empilées proprement */
+.veille-page{
+  display: grid;
+  gap: 28px;
+  justify-items: center;
+  padding: 40px 16px 60px;
 }
 
 .veille-card{
@@ -918,11 +920,10 @@ li:hover .sousmenu {
 .veille-title{
   text-align: center;
   font-size: 28px;
-  margin: 0 0 26px;
+  margin: 0 0 22px;
   font-weight: 700;
 }
 
-/* carte thématique */
 .veille-theme h3{
   margin: 18px 0 10px;
   font-size: 16px;
@@ -951,22 +952,89 @@ li:hover .sousmenu {
   border-bottom-color: rgba(0,0,0,0.6);
 }
 
-/* zone frise */
-.veille-zone{
-  position: relative;
-  height: 420px;               /* assez grand pour éviter chevauchements */
-  margin-top: 10px;
+/* FRise stable: aucune superposition */
+.frise{
+  display: grid;
+  grid-template-rows: auto 140px auto;
+  gap: 18px;
+  align-items: center;
 }
 
-/* grande flèche */
-.veille-arrow{
-  position: absolute;
-  left: 40px;
-  right: 40px;
-  top: 55%;
-  transform: translateY(-50%);
-  height: 110px;
+/* 2 items en haut, 2 en bas, parfaitement répartis */
+.frise-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 140px; /* distance entre veille gauche / droite */
+  align-items: end;
+  padding: 0 40px;
+}
 
+.frise-row.bottom{
+  align-items: start;
+}
+
+/* item cliquable */
+.frise-item{
+  position: relative;
+  width: 220px;
+  color: #111;
+  text-decoration: none;
+}
+
+.frise-item .v-title{
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.frise-item .v-sub{
+  display: block;
+  font-size: 12.5px;
+  opacity: 0.9;
+}
+
+.frise-item:hover .v-title{
+  text-decoration: underline;
+}
+
+/* trait vers la flèche (toujours aligné) */
+.frise-row.top .frise-item::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 2px;
+  height: 55px;
+  background: rgba(0,0,0,0.55);
+  transform: translateX(-50%) rotate(18deg);
+  transform-origin: top center;
+}
+
+.frise-row.top .frise-item:last-child::after{
+  transform: translateX(-50%) rotate(-18deg);
+}
+
+.frise-row.bottom .frise-item::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 2px;
+  height: 55px;
+  background: rgba(0,0,0,0.55);
+  transform: translateX(-50%) rotate(-18deg);
+  transform-origin: bottom center;
+}
+
+.frise-row.bottom .frise-item:last-child::after{
+  transform: translateX(-50%) rotate(18deg);
+}
+
+/* flèche centrale */
+.frise-arrow{
+  height: 110px;
+  margin: 0 40px;
   background: linear-gradient(180deg, #2ed573, #18b85a);
   clip-path: polygon(
     0% 18%,
@@ -977,87 +1045,22 @@ li:hover .sousmenu {
     82% 82%,
     0% 82%
   );
-
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
-  z-index: 1;
 }
 
-/* items cliquables */
-.veille-item{
-  position: absolute;
-  width: 190px;
-  color: #111;
-  text-decoration: none;
-  z-index: 2;                  /* au-dessus de la flèche */
-}
-
-.veille-item .v-title{
-  display: block;
-  font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 4px;
-}
-
-.veille-item .v-sub{
-  display: block;
-  font-size: 12.5px;
-  opacity: 0.9;
-}
-
-/* effet hover léger (pro) */
-.veille-item:hover .v-title{
-  text-decoration: underline;
-}
-
-/* callout (trait) */
-.veille-item::after{
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 2px;
-  background: rgba(0,0,0,0.55);
-  top: 20px;
-  left: 0;
-  transform-origin: left center;
-}
-
-/* positions (évite chevauchement) */
-.veille-item.v1{ left: 55px;  top: 275px; }
-.veille-item.v1::after{ transform: rotate(-65deg); }
-
-.veille-item.v2{ left: 230px; top: 70px; }
-.veille-item.v2::after{ transform: rotate(65deg); }
-
-.veille-item.v3{ left: 420px; top: 265px; }
-.veille-item.v3::after{ transform: rotate(60deg); }
-
-.veille-item.v4{ left: 560px; top: 80px; }
-.veille-item.v4::after{ transform: rotate(70deg); }
-
-/* responsive : on passe en liste (pas de chevauchement sur mobile) */
+/* mobile: on empile, pas de traits */
 @media (max-width: 900px){
-  .veille-zone{
-    height: auto;
+  .frise-row{
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+    column-gap: 0;
+    padding: 0;
+    justify-items: center;
   }
-
-  .veille-arrow{
-    position: relative;
-    top: auto;
-    left: 0;
-    right: 0;
-    transform: none;
-    margin: 10px 0 20px;
-  }
-
-  .veille-item{
-    position: relative;
-    width: auto;
-    margin: 14px 0;
-  }
-
-  .veille-item::after{ display: none; }
+  .frise-item{ width: min(420px, 100%); }
+  .frise-item::after{ display: none !important; }
+  .frise-arrow{ margin: 0; }
 }
-
 
 
 
