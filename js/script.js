@@ -18,7 +18,7 @@ async function loadInto(selector, url) {
 
 // Inclusion de header/footer
 document.addEventListener("DOMContentLoaded", async () => {
-  const inHtmlFolder = location.pathname.includes("/html/");
+  const inHtmlFolder = location.pathname.includes("/html/", "/html/projets", "html/veile");
   const base = inHtmlFolder ? "partials/" : "html/partials/";
 
   try {
