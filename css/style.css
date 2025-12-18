@@ -562,8 +562,116 @@ li:hover .sousmenu {
 
 
 /*Projets////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.projet-section{
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 60px;
+}
 
+.projet-card{
+  width: min(1100px, 100%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  padding: 40px;
+}
 
+.projet-title{
+  text-align: center;
+  font-size: 28px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.projet-subtitle{
+  text-align: center;
+  margin: 0 0 26px;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.projet-meta{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 22px;
+}
+
+.meta-item{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.projet-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.projet-block{
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.projet-block h3{
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.projet-list{
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.projet-list li{
+  margin-bottom: 8px;
+}
+
+.projet-media{
+  margin-top: 22px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.projet-media h3{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.projet-note{
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.projet-img{
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .projet-meta{ grid-template-columns: 1fr; }
+  .projet-grid{ grid-template-columns: 1fr; }
+  .projet-card{ padding: 28px 18px; }
+}
+
+/*Compétences*************************************************************************************************/
 .sio-section{
   display: flex;
   justify-content: center;

@@ -9,36 +9,77 @@
     <script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
-    <header class="entetepage1">
-        <div class="logo">
-            <img src="../image/LogoStDenis.png" alt="Logo">
-        </div>
-        <nav role="navigation" aria-label="Main menu" class="main-menu">
-            <ul>
-              <li class="navli"><a href="index.html">Acceuil</a></li>
-              <li class="navli"><a href="projet.html">Projets</a>
-                  <ul class="sousmenu">
+<div id="navbar"></div>
 
-                  </ul>
-              </li>
-              <li class="navli" ><a href="competence.html">Compétences</a>
-                  <ul class="sousmenu">
+<section class="projet-section" id="projet-1">
+  <div class="projet-card">
+    <h2 class="projet-title">Projet 1 — Site web d’entreprise (stage)</h2>
+    <p class="projet-subtitle">
+      Conception et développement d’un site web “de A à Z” pour une entreprise, dans le cadre de plusieurs périodes de stage.
+    </p>
 
-                  </ul>
-              </li>
-              <li class="navli"><a href="veille.html">Veille</a>
-                  <ul class="sousmenu">
+    <div class="projet-meta">
+      <div class="meta-item"><strong>Contexte :</strong> Stage en entreprise</div>
+      <div class="meta-item"><strong>Durées :</strong> 2 stages (7 semaines) + prochain stage début janvier (5 semaines)</div>
+      <div class="meta-item"><strong>Objectif :</strong> Site vitrine + fonctionnalités métier + base de données</div>
+      <div class="meta-item"><strong>État :</strong> En cours</div>
+    </div>
 
-                  </ul>
-              </li>
-              <li class="navli"><a href="contact.html">Contact</a></li>
-          </ul>
-      </nav>
-      <div class="nav-buttons">
-          <button class="menu-toggle">&#9776;</button>
+    <div class="projet-grid">
+      <div class="projet-block">
+        <h3>Missions réalisées</h3>
+        <ul class="projet-list">
+          <li>Recueil des besoins et structuration des contenus (informations de l’entreprise, services, contacts).</li>
+          <li>Intégration de données fournies par l’entreprise (textes, visuels, éléments techniques).</li>
+          <li>Conception de l’architecture du site (navigation, pages, parcours utilisateur).</li>
+          <li>Création d’une maquette pour une fonctionnalité métier : création de pièces industrielles (workflow / écrans).</li>
+          <li>Mise en place d’une base technique évolutive (structure du code, organisation des fichiers, styles).</li>
+        </ul>
       </div>
-    </header>
 
+      <div class="projet-block">
+        <h3>Fonctionnalités prévues</h3>
+        <ul class="projet-list">
+          <li><strong>Authentification</strong> (système de login) : à démarrer.</li>
+          <li><strong>Espace de vente</strong> (fournitures / catalogue) : en cours, non finalisé.</li>
+          <li><strong>Module métier</strong> : saisie / création de pièces industrielles (à partir de la maquette).</li>
+          <li><strong>Gestion des contenus</strong> : pages administrables et évolution des informations.</li>
+          <li><strong>Formulaire de contact</strong> et demande de devis.</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Compétences mobilisées</h3>
+        <ul class="projet-list">
+          <li>HTML / CSS / JavaScript : intégration et interactions.</li>
+          <li>Structuration et qualité du code (réutilisabilité, maintenance).</li>
+          <li>Base de données : préparation des entités et des données à intégrer.</li>
+          <li>Sécurité web : principes pour le futur login (sessions, validation côté serveur).</li>
+          <li>Travail en entreprise : organisation, itérations, retours utilisateur.</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Suite prévue (stage de janvier — 5 semaines)</h3>
+        <ul class="projet-list">
+          <li>Implémentation du système de login + gestion des rôles (utilisateur / admin).</li>
+          <li>Finalisation du module “vente de fournitures” (produits, panier, commandes).</li>
+          <li>Connexion complète au back-end et à la base de données.</li>
+          <li>Amélioration UX/UI à partir des retours (responsive, cohérence visuelle, accessibilité).</li>
+          <li>Tests et sécurisation (contrôles, erreurs, validation des formulaires).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="projet-media">
+      <h3>Maquette (fonctionnalité pièces industrielles)</h3>
+      <p class="projet-note">Je joins ici la maquette réalisée durant le stage (image à ajouter).</p>
+
+      <!-- Remplace src par ton image -->
+      <img class="projet-img" src="#" alt="Maquette - création de pièces industrielles">
+    </div>
+  </div>
+</section>
 
 
   <section class="apropossection">
@@ -69,41 +110,6 @@
 
 
 </body>
-    <footer>
-  <div class="footer-conteneur">
-    <div class="footer-div">
-      <h4>Contactez-nous</h4>
-      <ul>
-        <li>Fax : 04 75 32 43 81</li>
-        <li>Téléphone : 04 75 32 42 31</li>
-        <li>Émail : tecnitub.sarl@wanadoo.fr</li>
-      </ul>
-    </div>
-
-    <div class="footer-div">
-      <h4>Liens rapides</h4>
-      <ul>
-        <li><a href="/SITE/HTML/Prestation.html">Prestation</a></li>
-        <li><a href="/SITE/HTML/Fourniture.html">Fourniture</a></li>
-        <li><a href="/SITE/HTML/Diagnostics&etudes.html">Diagnostics & Étude</a></li>
-        <li><a href="/SITE/HTML/Contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-div">
-      <h4>Suivez-nous</h4>
-      <ul>
-        <li><a href="https://fr.linkedin.com/in/c%C3%A9dric-vert-96530b142">LinkedIn</a></li>
-        <h4>Conditions d'utilisation</h4>
-        <li><a href="/SITE/HTML/mentionslegales.html">Mentions légales</a></li>
-        <li><a href="/SITE/HTML/politiqueconfidentialite.html">Politique de confidentialité</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2024 Tecnitub. Tous droits réservés.</p>
-  </div>
-</footer>
+<div id="footer"></div>
   </body>
 </html>
