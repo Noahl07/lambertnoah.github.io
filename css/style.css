@@ -900,8 +900,7 @@ li:hover .sousmenu {
 }
 
 /*Veille/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* base carte (même logique que tes autres pages) */
-/* page veille: 2 cartes empilées proprement */
+/* base carte */
 .veille-page{
   display: grid;
   gap: 28px;
@@ -998,7 +997,11 @@ li:hover .sousmenu {
   text-decoration: underline;
 }
 
-/* trait vers la flèche (toujours aligné) */
+
+
+/* ===== TRAITS VERS LA FLÈCHE ===== */
+
+/* Ligne du haut */
 .frise-row.top .frise-item::after{
   content: "";
   position: absolute;
@@ -1011,10 +1014,12 @@ li:hover .sousmenu {
   transform-origin: top center;
 }
 
+/* Trait inverse pour l’item le plus à droite */
 .frise-row.top .frise-item:last-child::after{
   transform: translateX(-50%) rotate(-18deg);
 }
 
+/* Ligne du bas */
 .frise-row.bottom .frise-item::after{
   content: "";
   position: absolute;
@@ -1027,9 +1032,11 @@ li:hover .sousmenu {
   transform-origin: bottom center;
 }
 
+/* Trait inverse pour l’item le plus à droite */
 .frise-row.bottom .frise-item:last-child::after{
   transform: translateX(-50%) rotate(18deg);
 }
+
 
 /* flèche centrale */
 .frise-arrow{
