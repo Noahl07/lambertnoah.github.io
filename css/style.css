@@ -1115,7 +1115,10 @@ li:hover .sousmenu {
   text-decoration: underline;
 }
 
-
+.frise-item.v1 { transform: translateX(0px); }
+.frise-item.v2 { transform: translateX(150px); }
+.frise-item.v3 { transform: translateX(-150px); } 
+.frise-item.v4 { transform: translateX(50px); } 
 
 /* ===== TRAITS VERS LA FLÈCHE ===== */
 
