@@ -66,7 +66,7 @@ window.sendEmail = function () {
 };
 
 
-
+/*Ne fonctionne pas*/
 /*Redirection sans .html*/
 (function cleanUrlRedirect() {
   const path = location.pathname;
