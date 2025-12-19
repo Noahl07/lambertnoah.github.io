@@ -65,3 +65,30 @@ window.sendEmail = function () {
     });
 };
 
+
+
+/*Redirection sans .html*/
+(function cleanUrlRedirect() {
+  const path = location.pathname;
+
+
+  if (path.endsWith(".html") || path.includes(".")) return;
+  const slug = path.replace(/\/+$/, "").split("/").pop();
+
+  const routes = {
+    "projet": "projet.html",
+    "projets": "projet.html",
+    "veille": "veille.html",
+    "competence": "competence.html",
+    "competences": "competence.html",
+    "contact": "contact.html",
+    "accueil": "index.html"
+  };
+
+  if (!routes[slug]) return;
+
+  const inHtmlFolder = location.pathname.includes("/html/");
+  const base = inHtmlFolder ? "" : "html/";
+
+  location.replace("/" + base + routes[slug]);
+})();
