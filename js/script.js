@@ -29,3 +29,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(e);
   }
 });
+
+
+
+
+
+
+   // EmailJS
+window.sendEmail = function () {
+  const form = document.getElementById("contactForm");
+
+  if (!form.checkValidity()) {
+    alert("Veuillez remplir tous les champs requis.");
+    return;
+  }
+
+  const emailParams = {
+    nom: document.getElementById("nom").value,
+    email: document.getElementById("email").value,
+    telephone: document.getElementById("telephone").value,
+    entreprise: document.getElementById("entreprise").value,
+    poste: document.getElementById("poste").value,
+    message: document.getElementById("message").value,
+    to_email: "lambert.noah@lycee-saintdenis.com"
+  };
+
+  emailjs.send("service_t9n0r99", "template_tm8urmr", emailParams, "GpONeU1BAYKvEK-4N")
+    .then(() => {
+      alert("Email envoyé avec succès !");
+      form.reset();
+    })
+    .catch((error) => {
+      alert("Échec de l'envoi de l'email.");
+      console.error("EmailJS error:", error);
+    });
+};
+

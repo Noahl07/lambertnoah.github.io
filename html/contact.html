@@ -6,6 +6,12 @@
     <title>Contact - Portfolio</title>
     <link href="../css/style.css" rel="stylesheet">
     <link rel="preload">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("GpONeU1BAYKvEK-4N");
+  });
+</script>
     <script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
@@ -19,7 +25,7 @@
 
     <div class="form-contact">
       <h1>Contactez-moi</h1>
-      <form action="envoyer_email.php" method="post">
+      <form id="contactForm" onsubmit="event.preventDefault(); sendEmail();">
         <label for="nom">Nom/Prénom :</label>
         <input type="text" id="nom" name="nom" required>
     
@@ -44,7 +50,7 @@
         <textarea id="message" name="message" required></textarea>
 
         <label for="Fichier">Joindre un fichier : (5 Mo max.)</label>
-        <input type="file" name="Fichier">
+        <input type="file" name="Fichier" disabled>
         <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
     
         <input type="submit" value="Envoyer">
