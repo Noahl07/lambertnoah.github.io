@@ -1507,6 +1507,139 @@ input[type="email"],
 }
 
 
+
+
+/*Mentions légales*/
+/* Mentions Légales */
+.mentionslegales {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.mentionslegales h1 {
+  color: #45c770;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mentionslegales h3 {
+  color: #45c770;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.mentionslegales p,
+.mentionslegales ul,
+.mentionslegales br {
+  margin-bottom: 15px;
+}
+
+.mentionslegales ul {
+  list-style-type: disc;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.mentionslegales ul li {
+  margin-bottom: 10px;
+}
+
+.mentionslegales a.textebleu,
+.mentionslegales a.lienbleu {
+  color: #45c770;;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mentionslegales a.textebleu:hover,
+.mentionslegales a.lienbleu:hover {
+  text-decoration: underline;
+}
+
+
+.textebleu
+{
+  color: #45c770;
+}
+
+
+
+/*Polique de confidentialité*/
+
+
+/* Politique de confidentialité*/
+.politique-confidentialite {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contenu {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.politique-confidentialite h1,
+.politique-confidentialite h2,
+.politique-confidentialite h3 {
+  color: #45c770;
+}
+
+.politique-confidentialite h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.politique-confidentialite h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.politique-confidentialite h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.politique-confidentialite p {
+  margin-bottom: 15px;
+}
+
+.politique-confidentialite ul {
+  list-style-type: disc;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.politique-confidentialite ul li {
+  margin-bottom: 10px;
+}
+
+.politique-confidentialite address {
+  font-style: normal;
+  margin-top: 20px;
+}
+
+
+
+
 /*Bas de page///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 footer {
   background-color: #333;
