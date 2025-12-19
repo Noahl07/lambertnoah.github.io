@@ -18,11 +18,11 @@ input, textarea, select {
   color: #30af5a;
 }
 
-
 .href
 {
   text-decoration: none;
 }
+
 
 /*////  Entête    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -471,7 +471,7 @@ li:hover .sousmenu {
   }
   
   .aproposdiv a:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   .aproposdiv h3 {
@@ -1173,7 +1173,7 @@ li:hover .sousmenu {
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
 }
 
-/* mobile: on empile, pas de traits */
+/* mobile: empiler, pas de traits */
 @media (max-width: 900px){
   .frise-row{
     grid-template-columns: 1fr;
@@ -1187,6 +1187,101 @@ li:hover .sousmenu {
   .frise-arrow{ margin: 0; }
 }
 
+
+
+/*Veille 1 ///////////////////////////////*/
+/* =========================
+   VEILLE - PAGE ARTICLE
+========================= */
+.veille-page{
+  padding: 40px 16px;
+}
+
+.veille-article{
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.veille-article-card{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.veille-article-top{
+  padding: 26px 28px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.veille-badge{
+  display: inline-block;
+  background: rgba(0,0,0,0.08);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.veille-h1{
+  margin: 0 0 14px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.veille-meta{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 16px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.veille-article-body{
+  padding: 22px 28px 10px;
+}
+
+.veille-article-body h2{
+  margin: 18px 0 8px;
+  font-size: 18px;
+}
+
+.veille-article-body p{
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.veille-kpi{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.veille-source a{
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.veille-article-footer{
+  padding: 14px 28px 22px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.veille-back{
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .veille-meta{
+    grid-template-columns: 1fr;
+  }
+  .veille-h1{
+    font-size: 22px;
+  }
+}
 
 
 /*Autre//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1223,15 +1318,12 @@ li:hover .sousmenu {
 
 .vehicule h3 {
   color: #14c91d;
-  text-decoration: none !important;
 }
-
 
 .price {
   color: #fff;
   font-weight: bold;
   margin-top: 10px;
-  text-decoration: none;
 }
 
 .nosvehicules
