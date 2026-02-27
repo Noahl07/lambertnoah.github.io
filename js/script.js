@@ -111,4 +111,61 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   });
 
+  const canvas = document.getElementById("matrixCanvas");
+  if (!canvas) return;
+
+  // Accessibilité : si l'utilisateur préfère réduire les animations
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
+
+  const ctx = canvas.getContext("2d");
+
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(canvas.clientWidth * dpr);
+    canvas.height = Math.floor(canvas.clientHeight * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  const chars = "01#@&$%*+";
+  const fontSize = 16;
+  let columns = Math.floor(canvas.clientWidth / fontSize);
+  let drops = Array(columns).fill(0);
+
+  function tick() {
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
+
+    // fond légèrement transparent pour la traînée
+    ctx.fillStyle = "rgba(0,0,0,0.10)";
+    ctx.fillRect(0, 0, w, h);
+
+    ctx.font = `${fontSize}px monospace`;
+    ctx.fillStyle = "rgba(86, 190, 100, 0.85)"; // ton vert theme
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+
+      ctx.fillText(text, x, y);
+
+      // reset aléatoire en bas (lent + discret)
+      if (y > h && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  // recalcul colonnes au resize
+  window.addEventListener("resize", () => {
+    columns = Math.floor(canvas.clientWidth / fontSize);
+    drops = Array(columns).fill(0);
+  });
+
+  tick();
+
 });
