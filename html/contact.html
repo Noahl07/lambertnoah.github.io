@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("GpONeU1BAYKvEK-4N");
+  });
+</script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+
+    <div class="form-contact">
+      <h1>Contactez-moi</h1>
+      <form id="contactForm" onsubmit="event.preventDefault(); sendEmail();">
+        <label for="nom">Nom/Prénom :</label>
+        <input type="text" id="nom" name="nom" required>
+    
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="telephone">Téléphone :</label>
+        <input type="text" id="telephone" name="telephone" required>
+    
+        <div class="formulaire">
+            <div class="form-group">
+                <label for="entreprise">
+  Entreprise 
+  <span class="info-bulle">*
+    <span class="tooltip">Champ facultatif</span>
+  </span>
+</label>
+                <input type="text" id="entreprise" name="entreprise">
+            </div>
+            <div class="form-group">
+                <label for="poste">Poste* :</label>
+                <input type="text" id="poste" name="poste">
+            </div>
+        </div>
+        <p class="facultatif">* : Facultatif</p>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <label for="Fichier">Joindre un fichier : (5 Mo max.)</label>
+        <input type="file" name="Fichier">
+        <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+    
+        <input type="submit" value="Envoyer">
+    </form>
+    
+    </div>
+   </br>
+ </br>
+
+<div id="footer"></div>
+  </body>
+</html>

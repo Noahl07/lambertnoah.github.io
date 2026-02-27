@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Compétences - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+ <main class="veille-page">
+    <section class="veille-article">
+      <div class="veille-article-card">
+
+        <div class="veille-article-top">
+          <span class="veille-badge">Veille 2</span>
+          <h1 class="veille-h1">
+            Laravel & Intelligence artificielle : Boost, MCP et frameworks modernes
+          </h1>
+
+          <div class="veille-meta">
+            <div><strong>Date :</strong> 29 juillet 2025</div>
+            <div><strong>Thème :</strong> IA & frameworks web</div>
+            <div><strong>Contexte :</strong> Laracon US 2025</div>
+          </div>
+        </div>
+
+        <div class="veille-article-body">
+          <h2>Contexte</h2>
+          <p>
+            Les frameworks web modernes cherchent à intégrer l’intelligence artificielle directement
+            dans les outils de développement afin d’améliorer la productivité, la qualité du code
+            et la rapidité de mise en production.
+          </p>
+
+          <h2>Résumé</h2>
+          <p>
+            Lors de la Laracon US 2025, l’écosystème Laravel a présenté de nouvelles orientations
+            autour de l’IA, notamment avec des concepts comme <strong>Laravel Boost</strong>
+            et l’intégration de modèles via des protocoles standardisés (MCP).
+            Ces évolutions visent à faciliter l’assistance au développement,
+            l’automatisation de certaines tâches et l’interaction avec des services d’IA.
+          </p>
+
+          <h2>Points clés</h2>
+          <ul class="veille-kpi">
+            <li>Intégration native de fonctionnalités IA dans Laravel.</li>
+            <li>Utilisation de protocoles (MCP) pour connecter des modèles externes.</li>
+            <li>Automatisation partielle du développement et de la génération de code.</li>
+            <li>Amélioration de l’expérience développeur dans les projets complexes.</li>
+          </ul>
+
+          <h2>Intérêt pour le BTS SIO</h2>
+          <p>
+            Ces évolutions illustrent l’importance de la veille technologique dans le développement web
+            et montrent comment les frameworks modernes intègrent l’IA pour répondre
+            aux besoins des entreprises et des développeurs.
+          </p>
+
+          <h2>Analyse technique approfondie</h2>
+          <p>
+            Cette veille met en avant l’intégration de l’IA directement dans un framework backend (Laravel),
+            ce qui change l’approche : on ne parle plus seulement d’outil externe (Chat/IDE),
+            mais d’un <strong>service applicatif</strong> intégré à l’architecture.
+          </p>
+
+          <ul class="veille-kpi">
+            <li><strong>Architecture</strong> : l’IA devient un composant du SI (service dédié, couche “AI Service”).</li>
+            <li><strong>API & sécurité</strong> : gestion des clés, quotas/coûts, validation des inputs, logs.</li>
+            <li><strong>Asynchrone</strong> : intérêt des files (queues/jobs) pour traitements IA (latence, coût, retries).</li>
+            <li><strong>Observabilité</strong> : traçabilité des requêtes IA (prompt, contexte, résultat) sans exposer de données sensibles.</li>
+          </ul>
+
+          <h2>Comparaison Laravel / Symfony (vision SLAM)</h2>
+          <p>
+            Même si mon projet de stage est sous Symfony, cette veille est utile car les concepts sont transposables :
+            intégration via services, injection de dépendances, séparation des responsabilités.
+          </p>
+
+          <ul class="veille-kpi">
+            <li><strong>Laravel</strong> : intégrations souvent “plug-and-play” (écosystème packages) → rapide à prototyper.</li>
+            <li><strong>Symfony</strong> : approche très structurée (services, configuration) → robuste sur long terme.</li>
+            <li><strong>Point commun</strong> : dans les deux cas, l’IA doit rester une couche isolée (service), pas du code dispersé.</li>
+          </ul>
+
+          <h2>Application concrète dans mes projets</h2>
+          <p>
+            Si je devais intégrer une brique IA (ex : assistance à la saisie, génération de réponse, classification de demandes),
+            je conserverais une approche “propre” :
+          </p>
+
+          <ul class="veille-kpi">
+            <li>Créer un <strong>service IA</strong> (ex : AiClient/AiService) dédié aux appels API.</li>
+            <li>Centraliser la configuration (clé API, modèle, timeouts) via variables d’environnement.</li>
+            <li>Mettre en place des contrôles : taille des entrées, filtrage, logs minimisés, gestion d’erreurs.</li>
+            <li>Pour Tecnitub : utiliser l’IA uniquement sur des données <strong>non sensibles</strong> (ou anonymisées).</li>
+          </ul>
+
+          <h2>Limites / risques</h2>
+          <ul class="veille-kpi">
+            <li><strong>Confidentialité</strong> : risque d’envoyer des données client ou des fichiers sensibles.</li>
+            <li><strong>Fiabilité</strong> : l’IA peut produire des réponses incorrectes → validation nécessaire.</li>
+            <li><strong>Coûts</strong> : appels IA = coût variable → besoin de quotas et monitoring.</li>
+            <li><strong>Sécurité</strong> : attention à l’injection de prompt / contenu utilisateur non filtré.</li>
+          </ul>
+
+          <h2>Compétences BTS SIO mobilisées</h2>
+          <ul class="veille-kpi">
+            <li><strong>C2</strong> — Conception et développement d’applications (intégration d’un service externe).</li>
+            <li><strong>C3</strong> — Gestion des données (logs, traçabilité, anonymisation si nécessaire).</li>
+            <li><strong>C4</strong> — Cybersécurité (secrets, validation entrées, réduction surface d’attaque).</li>
+            <li><strong>C6</strong> — Organisation/gestion de projet (choix d’architecture + analyse critique).</li>
+          </ul>
+
+          <h2>Source</h2>
+          <p class="veille-source">
+            <a href="https://laracon.us/" target="_blank" rel="noopener">
+              Laracon US – Présentations et annonces Laravel
+            </a>
+          </p>
+        </div>
+
+        <div class="veille-article-footer">
+          <a class="veille-back" href="veille.html">← Retour à la frise</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+    
+
+
+</body>
+<div id="footer"></div>
+  </body>
+</html>

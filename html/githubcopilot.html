@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Compétences - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+ <main class="veille-page">
+    <section class="veille-article">
+      <div class="veille-article-card">
+
+        <div class="veille-article-top">
+          <span class="veille-badge">Veille 4</span>
+          <h1 class="veille-h1">
+            Vercel AI SDK 5 : l’IA intégrée nativement dans Next.js
+          </h1>
+
+          <div class="veille-meta">
+            <div><strong>Date :</strong> Septembre 2025</div>
+            <div><strong>Thème :</strong> IA & frameworks frontend</div>
+            <div><strong>Contexte :</strong> Écosystème Next.js / Vercel</div>
+          </div>
+        </div>
+
+        <div class="veille-article-body">
+          <h2>Contexte</h2>
+          <p>
+            Les applications web modernes évoluent vers des interfaces intelligentes,
+            capables de générer du contenu, d’assister les utilisateurs et d’interagir
+            avec des modèles d’intelligence artificielle en temps réel.
+          </p>
+
+          <h2>Résumé</h2>
+          <p>
+            Vercel a présenté la version 5 de son <strong>AI SDK</strong>, conçu pour s’intégrer
+            directement dans les applications Next.js.  
+            Ce SDK permet de connecter facilement des modèles d’IA (OpenAI, Anthropic, etc.)
+            afin de générer du texte, analyser des données ou créer des assistants conversationnels
+            sans complexité côté backend.
+          </p>
+
+          <h2>Points clés</h2>
+          <ul class="veille-kpi">
+            <li>Intégration native avec Next.js et React Server Components.</li>
+            <li>Support de plusieurs fournisseurs de modèles d’IA.</li>
+            <li>Gestion simplifiée des requêtes et des flux IA.</li>
+            <li>Amélioration des performances et de la sécurité côté serveur.</li>
+          </ul>
+
+          <h2>Intérêt pour le BTS SIO</h2>
+          <p>
+            Cette veille met en évidence l’évolution des frameworks frontend vers des
+            applications intelligentes, un enjeu clé pour le développement web moderne
+            et les projets professionnels en entreprise.
+          </p>
+
+          <h2>Analyse technique approfondie</h2>
+          <p>
+            Cette veille illustre l’évolution de Copilot vers un modèle plus “agentique” :
+            l’IA ne se limite plus à compléter du code, mais aide à <strong>organiser</strong> et
+            <strong>exécuter</strong> des tâches dans le temps via des sessions (continuité entre actions).
+          </p>
+
+          <ul class="veille-kpi">
+            <li><strong>Agent Sessions</strong> : conserver le contexte d’une tâche (objectif, fichiers modifiés, état d’avancement).</li>
+            <li><strong>Workflow</strong> : planifier → modifier → expliquer → proposer des changements (itérations plus rapides).</li>
+            <li><strong>IDE centric</strong> : intégration native dans VS Code → moins de friction pour l’utiliser au quotidien.</li>
+            <li><strong>Revue</strong> : l’agent peut aider à proposer/justifier des changements, mais la validation reste humaine.</li>
+          </ul>
+
+          <h2>Ce que ça apporte à un développement SLAM</h2>
+          <p>
+            L’intérêt principal est de gagner du temps sur les tâches répétitives et de renforcer la qualité,
+            à condition de conserver un cadre : architecture claire, conventions, tests et contrôle sécurité.
+          </p>
+
+          <ul class="veille-kpi">
+            <li>Accélération du <strong>refactoring</strong> (nettoyage, extraction de fonctions/services, renommages).</li>
+            <li>Aide à créer des <strong>tests</strong> et à documenter (README, commentaires, explications).</li>
+            <li>Support à la <strong>revue</strong> (détection d’incohérences, duplication, patterns améliorables).</li>
+          </ul>
+
+          <h2>Application concrète dans mon projet Tecnitub (Symfony)</h2>
+          <p>
+            Sur une application Symfony, ces apports sont pertinents si on les utilise de manière contrôlée :
+          </p>
+
+          <ul class="veille-kpi">
+            <li>Améliorer la structure (séparation contrôleurs / services) et la lisibilité du code.</li>
+            <li>Vérifier les points sensibles : routes, contrôles d’accès, formulaires, uploads.</li>
+            <li>Générer une première base de tests puis compléter manuellement.</li>
+          </ul>
+
+          <h2>Limites / vigilance (qualité & sécurité)</h2>
+          <ul class="veille-kpi">
+            <li><strong>Fausse confiance</strong> : l’agent peut produire du code “qui compile” mais incorrect métier.</li>
+            <li><strong>Sécurité</strong> : risque d’oublier validations, contrôles d’accès, protections CSRF/uploads.</li>
+            <li><strong>Confidentialité</strong> : ne jamais exposer secrets, données clients, clés API.</li>
+            <li><strong>Dérive</strong> : l’agent peut modifier trop de fichiers → besoin de scope clair et revue.</li>
+          </ul>
+
+          <h2>Compétences BTS SIO mobilisées</h2>
+          <ul class="veille-kpi">
+            <li><strong>C2</strong> — Conception/développement : refactoring, structuration, tests.</li>
+            <li><strong>C4</strong> — Cybersécurité : validation, secrets, réduction surface d’attaque.</li>
+            <li><strong>C6</strong> — Gestion de projet : organisation des tâches, traçabilité, revue.</li>
+          </ul>
+
+          <h2>Source</h2>
+          <p class="veille-source">
+            <a href="https://vercel.com/blog/introducing-the-vercel-ai-sdk" target="_blank" rel="noopener">
+              Vercel – Introducing the AI SDK
+            </a>
+          </p>
+        </div>
+
+        <div class="veille-article-footer">
+          <a class="veille-back" href="veille.html">← Retour à la frise</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+    
+
+
+</body>
+<div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Compétences - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+<section class="projet-section" id="projet-2">
+  <div class="projet-card">
+
+    <h2 class="projet-title">
+      Projet 2 — algorithme d’analyse de stratégie de trading basé sur l’IA
+    </h2>
+
+    <p class="projet-subtitle">
+      Projet personnel consistant à concevoir un système algorithmique et intelligent
+      permettant d’analyser une stratégie de trading définie manuellement, sur une période
+      de temps précise, à partir de signaux issus de TradingView.
+    </p>
+
+    <div class="projet-meta">
+      <div class="meta-item"><strong>Type :</strong> Projet personnel</div>
+      <div class="meta-item"><strong>Marchés :</strong> GBP/USD – XAU/USD</div>
+      <div class="meta-item"><strong>Plateforme :</strong> TradingView</div>
+      <div class="meta-item"><strong>État :</strong> En cours</div>
+    </div>
+
+    <div class="projet-grid">
+
+      <div class="projet-block">
+        <h3>Objectifs du projet</h3>
+        <ul class="projet-list">
+          <li>Définir et formaliser une stratégie de trading créée.</li>
+          <li>Analyser cette stratégie sur une fenêtre temporelle déterminée.</li>
+          <li>Automatiser l’analyse à l’aide d’un algorithme.</li>
+          <li>Préparer l’intégration de techniques de machine learning.</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Principe de fonctionnement</h3>
+        <ul class="projet-list">
+          <li>Envoi de signaux de trading depuis TradingView via webhooks.</li>
+          <li>Réception et traitement des signaux par une API backend.</li>
+          <li>Récupération et analyse des données de marché associées.</li>
+          <li>Application de la stratégie sur la période définie.</li>
+          <li>Génération de résultats exploitables (analyse, validation, logs).</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Architecture technique</h3>
+        <ul class="projet-list">
+          <li>API REST développée en Python avec FastAPI.</li>
+          <li>Serveur d’exécution Uvicorn.</li>
+          <li>Routes dédiées à la réception des webhooks.</li>
+          <li>Séparation claire de la logique métier et des utilitaires.</li>
+          <li>Système de logs pour le suivi et le débogage.</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Technologies utilisées</h3>
+        <ul class="projet-list">
+          <li>Python</li>
+          <li>FastAPI / Uvicorn</li>
+          <li>pandas / numpy (traitement de données)</li>
+          <li>yfinance (données financières)</li>
+          <li>Requests / BeautifulSoup / lxml</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Avancement actuel</h3>
+        <ul class="projet-list">
+          <li>Architecture backend fonctionnelle.</li>
+          <li>Réception et traitement des signaux TradingView.</li>
+          <li>Premières analyses de stratégies sur données historiques.</li>
+          <li>Suivi des traitements via un système de logs.</li>
+        </ul>
+      </div>
+
+      <div class="projet-block">
+        <h3>Évolutions prévues</h3>
+        <ul class="projet-list">
+          <li>Ajout d’un modèle de machine learning pour l’évaluation automatique.</li>
+          <li>Optimisation des critères d’entrée et de sortie.</li>
+          <li>Comparaison de plusieurs stratégies.</li>
+          <li>Visualisation statistique des performances.</li>
+          <li>Renforcement de la robustesse et de la sécurité de l’API.</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+    <div class="projet-media">
+      <h3>Architecture du système</h3>
+      <p class="projet-note">
+        Capture d’écran représentant l’architecture globale du projet :
+        TradingView → API FastAPI → analyse algorithmique → génération des résultats.
+      </p>
+
+      <img
+        class="projet-img"
+        src="/lambertnoah.github.io/image/archiApp.png"
+        alt="Architecture de l'algo d’analyse de trading">
+    </div>
+
+
+    <div class="projet-media">
+      <h3>Résultat – Analyse d’un signal</h3>
+      <p class="projet-note">
+        Exemple illustrant la sortie de l'analyse après traitement complet,
+        incluant les informations utiles pour l’évaluation de la stratégie.
+      </p>
+
+      <img
+        class="projet-img"
+        src="/lambertnoah.github.io/image/resultat_analyse_1.png.jpg"
+        alt="Résultat de l’analyse de trading - exemple 1">
+    </div>
+
+
+    <div class="projet-media">
+      <h3>Résultat – Sortie du système</h3>
+      <p class="projet-note">
+        Second exemple de résultat généré après réception et analyse d’un signal :
+        données traitées, conditions validées et informations retournées par le système.
+      </p>
+
+      <img
+        class="projet-img"
+        src="/lambertnoah.github.io/image/resultat_analyse_2.png.jpg"
+        alt="Résultat de l’analyse de trading - exemple 2">
+    </div>
+
+  </div>
+</section>
+
+    
+
+
+</body>
+   <div id="footer"></div>
+  </body>
+</html>

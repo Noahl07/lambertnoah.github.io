@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Veille - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+<main>
+  <section class="veille-page" id="veille">
+
+    <div class="veille-card">
+      <h2 class="veille-title">Veille technologique</h2>
+
+  <div class="veille-theme">
+    <h3>Thématique</h3>
+    <p>
+      Intelligence artificielle générative appliquée au développement web : assistance au codage,
+      débogage, génération de tests, documentation, intégration API et impacts cybersécurité.
+    </p>
+
+    <h3>Objectifs de la veille (SLAM)</h3>
+    <ul class="veille-sources">
+      <li>Identifier les usages concrets de l’IA pour accélérer le développement (backend/frontend).</li>
+      <li>Comprendre les impacts sécurité (fuites de secrets, dépendances, prompt injection, code vulnérable).</li>
+      <li>Sélectionner des outils et pratiques applicables à mes projets (Symfony, déploiement, API).</li>
+    </ul>
+
+    <h3>Méthodologie</h3>
+    <ul class="veille-sources">
+      <li><strong>Collecte</strong> : flux officiels (OpenAI, GitHub), blogs techniques, docs framework.</li>
+      <li><strong>Tri</strong> : intérêt SLAM (implémentable), fiabilité de la source, nouveautés.</li>
+      <li><strong>Capitalisation</strong> : prise de notes + synthèse courte (problème → solution → limites → application).</li>
+      <li><strong>Application</strong> : test sur projets (ex : sécurisation, refactoring, génération de tests).</li>
+    </ul>
+
+    <h3>Sources suivies (exemples)</h3>
+    <ul class="veille-sources">
+      <li><strong>OpenAI</strong> — annonces produits & modèles (capacités, limites, cas d’usage dev).</li>
+      <li><strong>GitHub</strong> — Copilot / outils développeurs (workflows, IDE, sécurité).</li>
+      <li><strong>Docs frameworks</strong> — Next.js / Laravel / Symfony (patterns + intégrations IA).</li>
+    </ul>
+
+    <h3>Actualités suivies</h3>
+    <ul class="veille-sources">
+      <li><strong>Oct. 2025</strong> — <a href="https://openai.com/fr-FR/index/introducing-gpt-5/" target="_blank" rel="noopener">OpenAI : GPT-5 (annonce)</a></li>
+      <li><strong>Sep. 2025</strong> — <a href="https://github.com/features/copilot" target="_blank" rel="noopener">GitHub Copilot : fonctionnalités</a></li>
+      <li><strong>Août 2025</strong> — <a href="https://www.raitech-digital-agency.com/fr/actualites/intelligence-artificielle-quelles-nouveautes-pour-les-developpeurs-frontend-et-backend-en-2025" target="_blank" rel="noopener">IA & frameworks modernes (Next.js / Laravel)</a></li>
+    </ul>
+  </div>
+    </div>
+
+
+
+
+  <div class="veille-card">
+    <h2 class="veille-title">Synthèse — apports concrets</h2>
+
+    <h3>Ce que je retiens (points clés)</h3>
+    <ul class="veille-sources">
+      <li><strong>Accélération dev</strong> : génération d’ébauches (controllers, DTO, tests) + refactorings.</li>
+      <li><strong>Qualité</strong> : aide à écrire tests, documentation, revue de code (mais validation humaine obligatoire).</li>
+      <li><strong>Sécurité</strong> : risques de fuites (secrets), code vulnérable généré, dépendances non maîtrisées.</li>
+      <li><strong>API IA</strong> : intégration via API (chat, embeddings) → besoin de gouvernance (logs, coûts, RGPD).</li>
+    </ul>
+
+    <h3>Applications dans mes projets</h3>
+    <div class="veille-grid">
+      <div class="veille-box">
+        <h4>Projet Tecnitub (Symfony)</h4>
+        <p>
+          Utilisation de bonnes pratiques issues de la veille : durcissement sécurité (CSRF, rôles, uploads),
+          revue des points d’entrée (forms/routes), et approche “diagnostic en production” (logs/config).
+        </p>
+        <p>
+          <a class="comp-proof" href="sitewebent.html#securite">Sécurité</a> —
+          <a class="comp-proof" href="sitewebent.html#deploiement">Déploiement</a>
+        </p>
+      </div>
+
+      <div class="veille-box">
+        <h4>Projet Algo Trading</h4>
+        <p>
+          La veille IA confirme l’intérêt des assistants pour accélérer le prototypage, générer des tests
+          et documenter les pipelines (API → analyse → résultats).
+        </p>
+        <p>
+          <a class="comp-proof" href="algotrading.html">Projet Algo</a>
+        </p>
+      </div>
+    </div>
+
+  </br>  </br>
+
+      <div class="frise">
+
+        <!-- LIGNE DU HAUT -->
+        <div class="frise-row top">
+          <a class="frise-item v2" href="/lambertnoah.github.io/html/Laravel&Ia.html" rel="noopener">
+            <span class="v-title">Laravel & Intelligence artificielle</span>
+            <span class="v-sub">IA intégrée aux frameworks backend / Juillet 2025</span>
+          </a>
+
+          <a class="frise-item v4" href="/lambertnoah.github.io/html/githubcopilot.html" rel="noopener">
+            <span class="v-title">GitHub Copilot nouvelle génération</span>
+            <span class="v-sub">Assistant IA pour développeurs / Octobre 2025</span>
+          </a>
+        </div>
+
+        <!-- FLECHE AU CENTRE -->
+        <div class="frise-arrow" aria-hidden="true"></div>
+
+        <!-- LIGNE DU BAS -->
+        <div class="frise-row bottom">
+          <a class="frise-item v1" href="/lambertnoah.github.io/html/developpementia.html" rel="noopener">
+            <span class="v-title">L’IA révolutionne le développement web</span>
+            <span class="v-sub">Intelligence artificielle et développement web / 23 juillet 2025</span>
+          </a>
+
+          <a class="frise-item v3" href="/lambertnoah.github.io/html/nextjs&Ia.html" rel="noopener">
+            <span class="v-title">Next.js & IA générative</span>
+            <span class="v-sub">Framework frontend et assistants IA / Septembre 2025</span>
+          </a>
+        </div>
+  </br>
+          <h3>Limites et bonnes pratiques</h3>
+  <ul class="veille-sources">
+    <li>Ne jamais envoyer de secrets, clés API, données sensibles dans un outil IA.</li>
+    <li>Valider le code généré : sécurité, performances, cohérence métier.</li>
+    <li>Documenter ce qui a été généré / modifié pour garder une traçabilité.</li>
+  </ul>
+</div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+
+
+
+<div id="footer"></div>
+  </body>
+</html>

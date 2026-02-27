@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Compétences - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+
+  <section class="apropossection">
+    <div class="aproposdiv">
+<h2>Projet Pépi+ – Application Web de Gestion de Stock</h2>
+
+<p>
+Le projet Pépi+ consiste à concevoir une application web complète permettant 
+la gestion des stocks réels et virtuels d’une pépinière, avec traçabilité sanitaire obligatoire.
+Le projet a été réalisé sous Symfony (architecture MVC) avec une base MySQL.
+</p>
+
+<h3>Contexte métier</h3>
+<p>
+La société Pépi+ produit et revend des plants (arbres, arbustes, vivaces). 
+Chaque plant doit être tracé par :
+</p>
+
+<ul class="veille-kpi">
+  <li>Son essence (nom latin + nom commun)</li>
+  <li>Sa saison de production</li>
+  <li>Son conditionnement (pot normalisé ou racine nue)</li>
+  <li>Sa provenance (production interne ou partenaire fournisseur)</li>
+</ul>
+
+<p>
+L’objectif est d’assurer une gestion fiable du stock et de garantir la traçabilité sanitaire,
+exigence réglementaire du secteur.
+</p>
+
+<h3>Architecture technique</h3>
+
+<ul class="veille-kpi">
+  <li><strong>Framework :</strong> Symfony (MVC)</li>
+  <li><strong>SGBD :</strong> MySQL</li>
+  <li><strong>Architecture :</strong> 3-tiers (Client / Serveur applicatif / Base de données)</li>
+  <li><strong>Authentification :</strong> Système sécurisé par rôles (Admin / Collaborateur / Partenaire)</li>
+</ul>
+
+<p>
+Le projet respecte les bonnes pratiques : séparation contrôleurs/services,
+validation des formulaires, gestion des accès, et organisation claire des entités.
+</p>
+
+<h3>Modélisation (Conception BDD)</h3>
+
+<p>
+La base de données a été conçue via un MCD permettant d’assurer la traçabilité complète.
+Les principales entités :
+</p>
+
+<ul class="veille-kpi">
+  <li>Plant (essence, saison, conditionnement)</li>
+  <li>Stock réel</li>
+  <li>Stock virtuel (partenaires)</li>
+  <li>Commande</li>
+  <li>Ligne de commande</li>
+  <li>Partenaire</li>
+  <li>Utilisateur (rôles)</li>
+</ul>
+
+<p>
+La relation entre LigneCommande → Plant → Saison → Partenaire permet
+de prouver la traçabilité exigée dans le cahier des charges :contentReference[oaicite:1]{index=1}.
+</p>
+
+<h3>Fonctionnalités développées</h3>
+
+<ul class="veille-kpi">
+  <li>Gestion du référentiel des plants (CRUD complet)</li>
+  <li>Gestion des saisons</li>
+  <li>Gestion des partenaires</li>
+  <li>Visualisation globale du stock (réel + virtuel)</li>
+  <li>Réservation automatique lors d’une commande</li>
+  <li>Mise à jour dynamique des quantités</li>
+  <li>Modification / suppression d’une commande avec impact sur le stock</li>
+  <li>Tableau de bord synthétique pour le pilotage</li>
+</ul>
+
+<h3>Points techniques avancés</h3>
+
+<ul class="veille-kpi">
+  <li>Contrôles d’accès via rôles Symfony</li>
+  <li>Validation serveur + gestion erreurs métier</li>
+  <li>Requêtes optimisées pour calculer les stocks en temps réel</li>
+  <li>Respect strict du pattern MVC</li>
+  <li>Jeu de données de test complet (≥10 enregistrements par table)</li>
+  <li>Gestion Git rigoureuse (1 commit par fonctionnalité)</li>
+</ul>
+
+<h3>Compétences mobilisées (BTS SIO SLAM)</h3>
+
+<ul class="veille-kpi">
+  <li><strong>C1</strong> – Analyse du besoin et rédaction des spécifications</li>
+  <li><strong>C2</strong> – Conception et développement d’une application web</li>
+  <li><strong>C3</strong> – Gestion de base de données et modélisation</li>
+  <li><strong>C4</strong> – Sécurisation des accès et gestion des rôles</li>
+  <li><strong>C6</strong> – Organisation du projet (Git, documentation, déploiement)</li>
+</ul>
+
+<h3>Apports professionnels</h3>
+
+<p>
+Ce projet m’a permis d’approfondir la conception orientée métier, la modélisation
+relationnelle et la gestion de contraintes réelles (traçabilité sanitaire).
+Il représente un projet complet conforme aux exigences professionnelles d’un
+développeur web en environnement structuré.
+</p>
+    </div>
+  </section>
+    
+
+
+</body>
+<div id="footer"></div>
+  </body>
+</html>

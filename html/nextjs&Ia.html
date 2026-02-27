@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Compétences - Portfolio</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preload">
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body class="background" onMouseOver="window.status='Merci de respecter le travail fait en ne copiant pas le contenu sans autorisation'; return true;">
+<div id="navbar"></div>
+
+
+
+<main class="veille-page">
+    <section class="veille-article">
+      <div class="veille-article-card">
+
+        <div class="veille-article-top">
+          <span class="veille-badge">Veille 3</span>
+          <h1 class="veille-h1">
+            GitHub Copilot (VS Code) : agents, sessions et intégrations améliorées
+          </h1>
+
+          <div class="veille-meta">
+            <div><strong>Date :</strong> 28 octobre 2025</div>
+            <div><strong>Thème :</strong> IA & productivité développeur</div>
+            <div><strong>Contexte :</strong> GitHub Universe / VS Code</div>
+          </div>
+        </div>
+
+        <div class="veille-article-body">
+          <h2>Contexte</h2>
+          <p>
+            Les assistants IA évoluent vers des fonctionnalités plus “agentiques” :
+            ils ne se limitent plus à compléter du code, mais aident à planifier, exécuter
+            et suivre des tâches de développement à travers des “sessions” et des workflows plus complets.
+          </p>
+
+          <h2>Résumé</h2>
+          <p>
+            GitHub Copilot dans Visual Studio Code a été renforcé avec des améliorations autour des
+            agents et des sessions (Agent Sessions), et une intégration plus native dans l’éditeur.
+            L’objectif est de faciliter le suivi des tâches et d’améliorer la continuité entre l’IDE,
+            les outils Copilot et les flux de travail (planification, exécution, revue).
+          </p>
+
+          <h2>Points clés</h2>
+          <ul class="veille-kpi">
+            <li>Améliorations des “Agent Sessions” pour suivre/relancer les tâches.</li>
+            <li>Intégration plus native du “coding agent” dans l’expérience VS Code.</li>
+            <li>Objectif : orchestrer plus facilement les tâches IA dans le workflow dev.</li>
+          </ul>
+
+          <h2>Analyse technique approfondie</h2>
+          <p>
+            Cette veille traite de l’intégration IA côté <strong>framework frontend</strong> (Next.js),
+            avec un SDK (Vercel AI SDK) pensé pour gérer des réponses IA en <strong>streaming</strong>
+            et simplifier la création d’interfaces conversationnelles.
+          </p>
+
+          <ul class="veille-kpi">
+            <li><strong>Streaming</strong> : affichage progressif de la réponse (meilleure UX, latence perçue réduite).</li>
+            <li><strong>Découpage client/serveur</strong> : l’appel IA doit être fait côté serveur (API route / server action) pour protéger la clé API.</li>
+            <li><strong>SSR/RSC</strong> : Next.js pousse une logique “server-first” (bon point pour la sécurité si bien appliqué).</li>
+            <li><strong>Gestion d’état UI</strong> : messages, chargements, annulation, erreurs → complexité front.</li>
+          </ul>
+
+          <h2>Architecture type (recommandée)</h2>
+          <p>
+            Pour une intégration propre, l’architecture la plus sûre est :
+            <strong>UI (client)</strong> → <strong>endpoint serveur Next.js</strong> → <strong>API IA</strong>.
+            Le serveur contrôle : validation, logs, quotas et sécurité.
+          </p>
+
+          <ul class="veille-kpi">
+            <li><strong>Client</strong> : uniquement affichage + envoi d’une requête (pas de clé API).</li>
+            <li><strong>Serveur</strong> : validation des entrées, filtrage, rate limiting, gestion erreurs.</li>
+            <li><strong>IA</strong> : réponse streamée et renvoyée au client.</li>
+          </ul>
+
+          <h2>Applications concrètes (vision SLAM)</h2>
+          <p>
+            Même si mon projet principal est en Symfony, cette veille est pertinente car elle montre
+            une logique réutilisable : <strong>séparer l’UI des appels sensibles</strong>.
+          </p>
+
+          <ul class="veille-kpi">
+            <li>Intégrer un assistant (chat) sur un site vitrine sans exposer de secrets côté navigateur.</li>
+            <li>Mettre en place un endpoint serveur “proxy” qui contrôle les données envoyées à l’IA.</li>
+            <li>Appliquer des limites (taille du prompt, fréquence, détection de contenu) avant d’appeler l’API.</li>
+          </ul>
+
+          <h2>Limites / risques</h2>
+          <ul class="veille-kpi">
+            <li><strong>Fuite de clé</strong> si l’appel IA est fait côté client (à éviter absolument).</li>
+            <li><strong>Prompt injection</strong> : contenu utilisateur non filtré peut manipuler le comportement du modèle.</li>
+            <li><strong>Coûts</strong> : streaming + usage fréquent → besoin de quotas / monitoring.</li>
+            <li><strong>Données sensibles</strong> : anonymiser / minimiser ce qui part vers l’API IA.</li>
+          </ul>
+
+          <h2>Compétences BTS SIO mobilisées</h2>
+          <ul class="veille-kpi">
+            <li><strong>C2</strong> — Conception & développement (architecture client/serveur, endpoints).</li>
+            <li><strong>C4</strong> — Cybersécurité (protection secrets, validation entrées, rate limiting).</li>
+            <li><strong>C6</strong> — Gestion de projet (choix d’architecture, compromis UX/coût/sécurité).</li>
+          </ul>
+
+          <h2>Source</h2>
+          <p class="veille-source">
+            <a href="https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/"
+               target="_blank" rel="noopener">
+              GitHub Changelog — “GitHub Copilot in Visual Studio Code gets upgraded” (28/10/2025)
+            </a>
+          </p>
+
+          <p class="veille-source">
+            <a href="https://code.visualstudio.com/updates/v1_106"
+               target="_blank" rel="noopener">
+              Visual Studio Code Updates — Oct. 2025 (v1.106) : mises à jour liées aux agents
+            </a>
+          </p>
+        </div>
+
+        <div class="veille-article-footer">
+          <a class="veille-back" href="veille.html">← Retour à la frise</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+    
+
+
+</body>
+<div id="footer"></div>
+  </body>
+</html>
