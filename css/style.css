@@ -570,7 +570,20 @@ li:hover .sousmenu {
   display: inline-block;     /* garde la liste centrée globalement */
 }
 
+.map-link{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#45c770;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
+}
 
+.map-link:hover{
+  background:#56be64;
+}
 
 /*Projets////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .projet-section{
